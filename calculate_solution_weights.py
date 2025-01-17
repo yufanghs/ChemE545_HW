@@ -16,9 +16,9 @@ def calculate_solution_weights(molecular_weights, solutions_needed):
         
         ### if yes, calculate the total weight and append the result into output_list with specified format
         if solution_rearrange[i][0] in molecular_weights.keys():
-            amount = float(solution_rearrange[i][1])
+            concentration = float(solution_rearrange[i][1])
             unit_weight = molecular_weights[solution_rearrange[i][0]]
-            total_weight = unit_weight * amount
+            total_weight = unit_weight * concentration
             output_list.append(solution_rearrange[i][0] + "-" + solution_rearrange[i][1] + "M-" + f"{total_weight:.2f}" + "g")
         
         ### if no, append "unknown"
